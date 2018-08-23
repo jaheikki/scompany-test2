@@ -12,6 +12,15 @@ Note: Normal Robot case (login-system.robot) and BDD Robot case (bdd-selenide-lo
 2. uncomment "selenide"-dependency
 3. comment "robotframework-selenium2library-java"-dependency
 
+Guide to run tests & get Robot test report:
+
+1. Install git, Java 8 and Maven 3
+2. git clone https://github.com/jaheikki/scompany-test2.git
+3. cd scompany-test2
+3. mvn -Probot -Drobot.login.username="your Github username" -Drobot.login.password="your Github password" clean install -Drobot.tag=normal #or
+4. mvn -Probot -Drobot.login.username="your Github username" -Drobot.login.password="your Github password" clean install -Drobot.tag=bdd
+   
+
 Normal robot case:
 
 ```
