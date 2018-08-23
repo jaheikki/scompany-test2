@@ -1,5 +1,17 @@
 # scompany-test2
 
+
+This project demoes truly working "login to Github" by running Robot Framework with 2 styles:
+
+1. Normal Robot style but using robotframework-maven-plugin i.e. Java as platform.
+2. BDD/Gherkin style of writing Robot, still Java as platform, but keywords are written by Java library, SelenideKeywords.java. Browser is controlled by Selenide Java library so normal Robot keywords are not used at all. This may not be the real use case but just to present extending Robot with Java library.
+
+Note: Normal Robot case (login-system.robot) and BDD Robot case (bdd-selenide-login.robot) cannot be running at the same time because of mixing dependencies in pom.xml (=Selenium stuff from 2 sources). The normal case, i.e. login-system.robot is working by default. If you want to test the bdd-selenide-login.robot:
+
+1. uncomment SelenideKeywords.java
+2. uncomment "selenide"-dependency
+3. comment "robotframework-selenium2library-java"-dependency
+
 Normal robot case:
 
 ```
@@ -77,7 +89,7 @@ The RobotFW test report of BDD case should look like this:
 
  <img src="https://raw.githubusercontent.com/jaheikki/scompany-test2/master/robot-bdd-test-report.png" width="600" height="300">
  
- SelenideKeywords.java:
+ SelenideKeywords.java as keyword library for Robot:
  
  ```
  package fi.jarih.robottesting;
