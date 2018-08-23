@@ -12,6 +12,8 @@ Note: Normal Robot case (login-system.robot) and BDD Robot case (bdd-selenide-lo
 2. uncomment "selenide"-dependency
 3. comment "robotframework-selenium2library-java"-dependency
 
+Recommend editing this project in latest IntelliJ IDEA IDE with Robot Framework Support plugin.
+
 Guide to run tests & get Robot test report:
 
 1. Install git, Java 8 and Maven 3
